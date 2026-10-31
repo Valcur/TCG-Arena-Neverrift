@@ -1,6 +1,6 @@
 async function removeCardProperty() {
     if (!transitionCards || transitionCards.length === 0) return
-    await updateCards(transitionCards, {
+    await functions.updateCards(transitionCards, {
         draggableTokens:
             [
                 {
