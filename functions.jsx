@@ -1,6 +1,6 @@
 async function removeCardProperty() {
     if (!transitionCards || transitionCards.length === 0) return
-    /*await functions.updateCards(transitionCards, {
+    await functions.updateCards(transitionCards, {
         draggableTokens:
             [
                 {
@@ -10,9 +10,9 @@ async function removeCardProperty() {
                     "count": 1
                 }
             ]
-    })*/
+    })
 
-  await functions.updateCards(transitionCards, { isTapped: false });
+
     for (const card of transitionCards) {
         await functions.giveCardTo(card)
     }
