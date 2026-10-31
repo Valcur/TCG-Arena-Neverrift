@@ -29,7 +29,9 @@ async function onCardsUpdate() {
             const card = cards?.[`Board_${i}_${j}`]?.[0]
             console.log(`Board_${i}_${j}`, card)
             if (card && card.draggableTokens?.length > 1) {
-                card.draggableTokens = [card.draggableTokens[card.draggableTokens.length - 1]];
+                await functions.updateCards([card], {
+                    draggableTokens: [card.draggableTokens[card.draggableTokens.length - 1]];
+                })
                 hasMadeChanges = true
             }
         }
