@@ -17,7 +17,7 @@ async function removeCardProperty() {
 async function onCardsUpdate() {
     const row = 2
     const col = 1
-    const myScore = 0
+    let myScore = 0
 
     for (let i = 1; i <= col; i++) {
         for (let j = 1; j <= row; j++) {
