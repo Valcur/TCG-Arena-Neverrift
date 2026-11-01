@@ -1,5 +1,6 @@
 async function removeCardProperty() {
     if (!transitionCards || transitionCards.length === 0) return
+    // Seulement si c'est une créature
     await functions.updateCards(transitionCards, {
         draggableTokens:
             [
@@ -12,6 +13,10 @@ async function removeCardProperty() {
         await functions.giveCardTo(card)
     }
     await functions.repositionCards()
+}
+
+async function ini() {
+    game.data.Manager.backgroundColor = colorsPerPosition[game.turn.orderPosition]?.backgroundColor ?? rgba(0,0,0,0.2)
 }
 
 async function onCardsUpdate() {
@@ -57,21 +62,25 @@ const colorsPerPosition = [
     {
         "id": "Orange",
         "name": "Orange token",
-        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Orange.png"
+        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Orange.png",
+        "backgroundColor": "rgba(233, 125, 40, 0.8)"
     },
     {
         "id": "Green",
         "name": "Green token",
-        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Green.png"
+        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Green.png",
+        "backgroundColor": "rgba(69, 123, 64, 0.8)"
     },
     {
         "id": "Blue",
         "name": "Blue token",
-        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Blue.png"
+        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Blue.png",
+        "backgroundColor": "rgba(52, 137, 143, 0.8)"
     },
     {
         "id": "Purple",
         "name": "Purple token",
-        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Purple.png"
+        "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Purple.png",
+        "backgroundColor": "rgba(73, 33, 108, 0.8)"
     }
 ]
