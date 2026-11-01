@@ -19,7 +19,6 @@ async function removeCardProperty() {
 
 async function ini() {
     const tamerCard = cards?.Tamer?.[0]
-    console.log(cards, tamerCard)
     if (!tamerCard) return
     await functions.updateCards([tamerCard], {
         draggableTokens:
@@ -28,10 +27,6 @@ async function ini() {
             ]
     })
     await functions.repositionCards()
-}
-
-async function ini() {
-    game.data.Manager.backgroundColor = colorsPerPosition[game.turn.orderPosition]?.backgroundColor ?? rgba(0, 0, 0, 0.2)
 }
 
 async function onCardsUpdate() {
