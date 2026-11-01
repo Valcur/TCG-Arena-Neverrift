@@ -15,13 +15,22 @@ async function removeCardProperty() {
     await functions.repositionCards()
 }
 
+async function tamerOnEnter() {
+    await functions.updateCards(transitionCards, {
+        draggableTokens:
+            [
+                colorsPerPosition[game.turn.orderPosition] ?? colorsPerPosition[0]
+            ]
+    })
+}
+
 async function ini() {
-    game.data.Manager.backgroundColor = colorsPerPosition[game.turn.orderPosition]?.backgroundColor ?? rgba(0,0,0,0.2)
+    game.data.Manager.backgroundColor = colorsPerPosition[game.turn.orderPosition]?.backgroundColor ?? rgba(0, 0, 0, 0.2)
 }
 
 async function onCardsUpdate() {
-    const row = 2
-    const col = 1
+    const row = 4
+    const col = 4
     let myScore = 0
 
     for (let i = 1; i <= col; i++) {
@@ -36,10 +45,11 @@ async function onCardsUpdate() {
         }
     }
 
-    game.data.Manager.score = myScore
+    console.log("update")
+    await functions.changeCounterValue(1, myScore)
 
     if (!game.turn.isMyTurn) return
-    
+
     let hasMadeChanges = false
     for (let i = 1; i <= col; i++) {
         for (let j = 1; j <= row; j++) {
