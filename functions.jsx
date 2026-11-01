@@ -19,6 +19,7 @@ async function removeCardProperty() {
 
 async function ini() {
     const tamerCard = cards?.Tamer?.[0]
+    console.log(cards, tamerCard)
     if (!tamerCard) return
     await functions.updateCards([tamerCard], {
         draggableTokens:
