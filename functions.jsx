@@ -1,6 +1,8 @@
 async function removeCardProperty() {
     if (!transitionCards || transitionCards.length === 0) return
     // Seulement si c'est une créature
+    const cardData = functions.getCardData(transitionCards[0])
+    if (cardData?.type !== "Creature") return
     await functions.updateCards(transitionCards, {
         draggableTokens:
             [
@@ -15,8 +17,10 @@ async function removeCardProperty() {
     await functions.repositionCards()
 }
 
-async function tamerOnEnter() {
-    await functions.updateCards(transitionCards, {
+async function ini() {
+    const tamerCard = cards?.Tamer?.[0]
+    if (!tamerCard) return
+    await functions.updateCards([tamerCard], {
         draggableTokens:
             [
                 colorsPerPosition[game.turn.orderPosition] ?? colorsPerPosition[0]
