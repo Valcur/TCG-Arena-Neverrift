@@ -22,6 +22,7 @@ async function tamerOnEnter() {
                 colorsPerPosition[game.turn.orderPosition] ?? colorsPerPosition[0]
             ]
     })
+    await functions.repositionCards()
 }
 
 async function ini() {
@@ -45,8 +46,8 @@ async function onCardsUpdate() {
         }
     }
 
-    console.log("update")
-    await functions.changeCounterValue(1, myScore)
+    console.log("update", myScore)
+    await functions.changeCounterValue(0, myScore)
 
     if (!game.turn.isMyTurn) return
 
