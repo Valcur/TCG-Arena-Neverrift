@@ -46,7 +46,6 @@ async function onCardsUpdate() {
         }
     }
 
-    console.log("update", myScore)
     await functions.changeCounterValue(0, myScore)
 
     if (!game.turn.isMyTurn) return
