@@ -1,0 +1,492 @@
+{
+    "name": "Neverrift",
+    "menuBackgroundImage": "https://valcur.github.io/TCG-Arena-Neverrift/Images/banner.webp",
+    "deckBuilding": {
+        "mainFilters": [
+            "type",
+            "faction",
+            "rarity",
+            "set"
+        ],
+        "formats": [
+            {
+                "title": "Classic",
+                "gameplay": "Classic",
+                "deckRuleset": "Classic"
+            }
+        ],
+        "deckRulesets": {
+            "Classic": {
+                "general": {
+                    "min": 31,
+                    "maxPerCard": 2
+                },
+                "categories": [
+                    {
+                        "category": "Tamer",
+                        "min": 1,
+                        "max": 1
+                    }
+                ]
+            }
+        }
+    },
+    "gameplay": {
+        "Classic": {
+            "beforeGameStart": {
+                "initialBoardSetup": {
+
+                },
+                "chooseAnotherStartingPlayer": false
+            },
+            "mulligan": {
+                "startingHandSize": 6,
+                "triggeredByButton": false,
+                "mulliganCount": {
+                    "max": 1
+                },
+                "mulliganCycle": {
+                    "info": "You may put up to 3 cards back in your deck, shuffle and then draw the amount of cards you put back",
+                    "selectionRange": {
+                        "max": 3
+                    },
+                    "steps": [
+                        "toBottom",
+                        "shuffle",
+                        "draw"
+                    ]
+                }
+            },
+            "newTurn": {
+                "drawOnStart": true,
+                "drawPerTurn": 1
+            },
+            "tokens": [],
+            "draggableTokens": [
+                {
+                    "id": "Orange",
+                    "name": "Orange token",
+                    "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Orange.png"
+                },
+                {
+                    "id": "Green",
+                    "name": "Green token",
+                    "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Green.png"
+                }
+            ],
+            "countersStartingValues": [0],
+            "sections": {
+                "layout": {
+                    "direction": "column",
+                    "style": {
+                        "width": "17.5vh"
+                    },
+                    "content": [
+                        {
+                            "section": "Manager"
+                        },
+                        {
+                            "section": "Tamer"
+                        }
+                    ]
+                },
+                "sharedZone": {
+                    "height": 0,
+                    "layout": {
+                        "direction": "row",
+                        "style": {
+                            "--board-column-width": "13vh",
+                            "--section-outline": "0px solid rgba(255,255,255,0.3)",
+                            "--section-border-radius": "1vh",
+                            "--section-gap": "0.75vh",
+                            "--section-padding": "0vh",
+                            "justifyContent": "center",
+                            "zIndex": 1,
+                            "backgroundColor": "rgba(0,0,0,0.1)",
+                            "backdropFilter": "blur(60px)",
+                            "borderRadius": "1.5vh",
+                            "width": "fit-content",
+                            "padding": "0.75vh",
+                            "gap": "var(--section-gap)"
+                        },
+                        "content": [
+                            {
+                                "direction": "column",
+                                "style": {
+                                    "width": "var(--board-column-width)",
+                                    "gap": "var(--section-gap)"
+                                },
+                                "content": [
+                                    {
+                                        "section": "Board_1_1",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_1_2",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_1_3",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_1_4",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "direction": "column",
+                                "style": {
+                                    "width": "var(--board-column-width)",
+                                    "gap": "var(--section-gap)"
+                                },
+                                "content": [
+                                    {
+                                        "section": "Board_2_1",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_2_2",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_2_3",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_2_4",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "direction": "column",
+                                "style": {
+                                    "width": "var(--board-column-width)",
+                                    "gap": "var(--section-gap)"
+                                },
+                                "content": [
+                                    {
+                                        "section": "Board_3_1",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_3_2",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_3_3",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_3_4",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "direction": "column",
+                                "style": {
+                                    "width": "var(--board-column-width)",
+                                    "gap": "var(--section-gap)"
+                                },
+                                "content": [
+                                    {
+                                        "section": "Board_4_1",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_4_2",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_4_3",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    },
+                                    {
+                                        "section": "Board_4_4",
+                                        "style": {
+                                            "outline": "var(--section-outline)",
+                                            "borderRadius": "var(--section-border-radius)",
+                                            "padding": "var(--section-padding)"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "categoriesAlreadyOnBoard": [
+                    "Tamer"
+                ],
+                "autoPlayFromHand": {
+
+                },
+                "autoPlayFromStack": {
+                    "Spell": "Discard"
+                },
+                "sectionsDict": {
+                    "Board_1_1": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_1_2": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_1_3": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_1_4": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_2_1": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_2_2": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_2_3": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_2_4": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_3_1": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_3_2": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_3_3": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_3_4": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_4_1": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_4_2": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_4_3": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Board_4_4": {
+                        "height": 18,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "displayedTitle": "",
+                        "events": {
+                            "onCardEnter": "await removeCardProperty()"
+                        }
+                    },
+                    "Tamer": {
+                        "height": 22,
+                        "alignment": "CENTER",
+                        "isHidden": "no",
+                        "noQuickActions": true,
+                        "keepTappedNewTurn": true
+                    },
+                    "Manager": {
+                        "type": "custom",
+                        "defaultValue": {
+                            "score": 0
+                        },
+                        "blueprint": {
+                            "type": "div",
+                            "props": {
+                                "className": "position-absolute top-0",
+                            }
+                        },
+                        "events": {
+                            "onCardsUpdate": "await onCardsUpdate()",
+                            "onPlayersSideboardClosed": "await ini()"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "defaultRessources": {
+        "backgrounds": [
+
+        ],
+        "decksUrl": "https://valcur.github.io/TCG-Arena-AdventureTime/decks.json"
+    },
+    "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nTo tame a creature, add a token of your color to it, the previous token will be removed automatically. Player counters will show how many tamed creatures each players have.",
+    "cards": {
+        "dataUrl": "https://valcur.github.io/TCG-Arena-Neverrift/NeverriftCards.json",
+        "cardBack": "https://valcur.github.io/TCG-Arena-Neverrift/Images/cardBack.jpg",
+        "cardBackColor": "#1d1d1e"
+    },
+    "scriptsUrls": [
+        "https://valcur.github.io/TCG-Arena-Neverrift/functions.jsx"
+    ]
+}
