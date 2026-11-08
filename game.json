@@ -462,7 +462,7 @@
                         "blueprint": {
                             "type": "div",
                             "props": {
-                                "className": "position-absolute top-0",
+                                "className": "position-absolute top-0"
                             }
                         },
                         "events": {
