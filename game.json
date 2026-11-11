@@ -107,7 +107,10 @@
                             "borderRadius": "1.5vh",
                             "width": "fit-content",
                             "padding": "0.75vh",
-                            "gap": "var(--section-gap)"
+                            "gap": "var(--section-gap)",
+                            "background": "url(https://valcur.github.io/TCG-Arena-Neverrift/Images/arena.jpg)",
+                            "boxShadow": "0 0 1vh black",
+                            "border": "1vh solid black"
                         },
                         "content": [
                             {
