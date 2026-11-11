@@ -478,16 +478,13 @@
         "backgrounds": [
 
         ],
-        "decksUrl": "https://valcur.github.io/TCG-Arena-AdventureTime/decks.json"
+        "decksUrl": "https://valcur.github.io/TCG-Arena-Neverrift/decks.json"
     },
-    "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nTo tame a creature, add a token of your color to it, the previous token will be removed automatically. Player counters will show how many tamed creatures each players have.",
+    "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nPlayer counters will show how many tamed creatures each players have.",
     "cards": {
         "dataUrl": "https://valcur.github.io/TCG-Arena-Neverrift/NeverriftCards.json",
         "cardBack": "https://valcur.github.io/TCG-Arena-Neverrift/Images/cardBack.jpg",
         "cardBackColor": "#1d1d1e"
-    },
-    "decksUrl": {
-        "https://valcur.github.io/TCG-Arena-Neverrift/decks.json"
     },
     "scriptsUrls": [
         "https://valcur.github.io/TCG-Arena-Neverrift/functions.jsx"
