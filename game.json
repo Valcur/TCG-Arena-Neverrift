@@ -486,6 +486,9 @@
         "cardBack": "https://valcur.github.io/TCG-Arena-Neverrift/Images/cardBack.jpg",
         "cardBackColor": "#1d1d1e"
     },
+    "decksUrl": {
+        "https://valcur.github.io/TCG-Arena-Neverrift/decks.json"
+    }
     "scriptsUrls": [
         "https://valcur.github.io/TCG-Arena-Neverrift/functions.jsx"
     ]

@@ -1,0 +1,613 @@
+[
+    {
+      "title": "The Free Tribes",
+      "id": "4c7bbe30-a14b-4076-81b5-dbf88a891f26",
+      "cardCount": 31,
+      "createdAt": "2026-11-11T17:35:41.025Z",
+      "lastModifiedAt": "2026-11-11T17:39:09.117Z",
+      "game": "Neverrift",
+      "format": [
+        "Classic"
+      ],
+      "deckList": {
+        "categoriesOrder": [
+          "Tamer",
+          "Creature",
+          "Place",
+          "Spell"
+        ],
+        "Tamer": [
+          {
+            "count": 1,
+            "id": "alpha_NVR002_1"
+          }
+        ],
+        "Creature": [
+          {
+            "count": 2,
+            "id": "alpha_NVR004_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR005_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR007_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR008_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR009_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR010_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR012_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR013_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR025_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR026_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR028_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR030_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR031_1"
+          }
+        ],
+        "Place": [
+          {
+            "count": 2,
+            "id": "alpha_NVR016_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR039_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR040_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR041_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR042_1"
+          }
+        ],
+        "Spell": [
+          {
+            "count": 1,
+            "id": "alpha_NVR018_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR019_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR020_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR021_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR022_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR023_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR047_1"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Verdant Pact",
+      "id": "556974d2-7d9c-491c-8525-ad737a051d30",
+      "cardCount": 31,
+      "createdAt": "2026-11-11T17:41:18.250Z",
+      "lastModifiedAt": "2026-11-11T17:41:26.576Z",
+      "game": "Neverrift",
+      "format": [
+        "Classic"
+      ],
+      "deckList": {
+        "categoriesOrder": [
+          "Tamer",
+          "Creature",
+          "Place",
+          "Spell"
+        ],
+        "Tamer": [
+          {
+            "count": 1,
+            "id": "alpha_NVR122_1"
+          }
+        ],
+        "Creature": [
+          {
+            "count": 1,
+            "id": "alpha_NVR123_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR124_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR125_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR126_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR127_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR128_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR130_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR032_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR033_1"
+          }
+        ],
+        "Place": [
+          {
+            "count": 2,
+            "id": "alpha_NVR134_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR135_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR136_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR137_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR039_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR040_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR041_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR042_1"
+          }
+        ],
+        "Spell": [
+          {
+            "count": 1,
+            "id": "alpha_NVR139_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR140_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR043_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR044_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR045_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR047_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR049_1"
+          }
+        ]
+      }
+    },
+    {
+      "title": "The Sworn",
+      "id": "a9e28c40-7244-4c19-a623-618f9beb453a",
+      "cardCount": 31,
+      "createdAt": "2026-11-11T17:41:54.859Z",
+      "lastModifiedAt": "2026-11-11T17:42:04.238Z",
+      "game": "Neverrift",
+      "format": [
+        "Classic"
+      ],
+      "deckList": {
+        "categoriesOrder": [
+          "Tamer",
+          "Creature",
+          "Place",
+          "Spell"
+        ],
+        "Tamer": [
+          {
+            "count": 1,
+            "id": "alpha_NVR099_1"
+          }
+        ],
+        "Creature": [
+          {
+            "count": 2,
+            "id": "alpha_NVR100_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR101_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR103_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR104_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR102_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR106_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR025_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR026_1"
+          }
+        ],
+        "Place": [
+          {
+            "count": 1,
+            "id": "alpha_NVR111_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR113_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR114_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR112_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR040_1"
+          }
+        ],
+        "Spell": [
+          {
+            "count": 1,
+            "id": "alpha_NVR116_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR118_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR120_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR045_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR048_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR049_1"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Royal Empire",
+      "id": "4a5bfb2d-3a16-48dd-bc78-704a32511961",
+      "cardCount": 31,
+      "createdAt": "2026-11-11T17:43:15.726Z",
+      "lastModifiedAt": "2026-11-11T17:43:23.384Z",
+      "game": "Neverrift",
+      "format": [
+        "Classic"
+      ],
+      "deckList": {
+        "categoriesOrder": [
+          "Tamer",
+          "Creature",
+          "Place",
+          "Spell"
+        ],
+        "Tamer": [
+          {
+            "count": 1,
+            "id": "alpha_NVR076_1"
+          }
+        ],
+        "Creature": [
+          {
+            "count": 2,
+            "id": "alpha_NVR078_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR085_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR077_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR080_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR081_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR084_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR032_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR033_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR034_1"
+          }
+        ],
+        "Place": [
+          {
+            "count": 1,
+            "id": "alpha_NVR088_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR090_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR091_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR039_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR040_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR041_1"
+          }
+        ],
+        "Spell": [
+          {
+            "count": 1,
+            "id": "alpha_NVR093_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR095_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR096_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR097_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR043_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR044_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR045_1"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Outcast",
+      "id": "932bf68d-3fc5-479e-97af-6fb8cfa37499",
+      "cardCount": 31,
+      "createdAt": "2026-11-11T17:44:24.585Z",
+      "lastModifiedAt": "2026-11-11T17:45:24.542Z",
+      "game": "Neverrift",
+      "format": [
+        "Classic"
+      ],
+      "deckList": {
+        "categoriesOrder": [
+          "Tamer",
+          "Creature",
+          "Place",
+          "Spell"
+        ],
+        "Tamer": [
+          {
+            "count": 1,
+            "id": "alpha_NVR053_1"
+          }
+        ],
+        "Creature": [
+          {
+            "count": 1,
+            "id": "alpha_NVR054_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR055_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR056_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR057_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR062_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR064_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR032_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR029_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR030_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR038_1"
+          }
+        ],
+        "Place": [
+          {
+            "count": 2,
+            "id": "alpha_NVR065_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR068_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR067_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR039_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR040_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR041_1"
+          }
+        ],
+        "Spell": [
+          {
+            "count": 1,
+            "id": "alpha_NVR070_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR071_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR072_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR073_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR074_1"
+          },
+          {
+            "count": 1,
+            "id": "alpha_NVR069_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR047_1"
+          },
+          {
+            "count": 2,
+            "id": "alpha_NVR048_1"
+          }
+        ]
+      }
+    }
+]
