@@ -105,10 +105,8 @@ async function checkEvole() {
     const toData = functions.getCardData(toCard)
 
     await functions.updateCards([fromCard], {
-        cardData: toData
+        grouppedToId: [toCard.id]
     })
-    await functions.updateCards([toCard], {
-        cardData: fromData
-    })
+
     await functions.repositionCards()
 } 
