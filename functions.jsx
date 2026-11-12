@@ -105,7 +105,7 @@ async function checkEvole() {
     const groupedCards = childIds.map(id => groupedById.get(id)).filter(Boolean)
 
     console.log("group", groupedCards)
-    for (const child in groupedCards) {
+    for (const child of groupedCards) {
         console.log("groupping", child)
         await functions.groupCard(toCard, child)
     }
