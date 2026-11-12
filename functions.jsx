@@ -96,6 +96,7 @@ const colorsPerPosition = [
 ]
 
 async function checkEvole() {
+    console.log(cards)
     const fromCard = cards.EvolveFrom?.[0]
     const toCard = cards.EvolveTo?.[0]
     if (!EvolveFrom || !EvolveTo) return
