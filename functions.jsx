@@ -1,3 +1,5 @@
+import { functions } from "stylus"
+
 async function removeCardProperty() {
     if (!transitionCards || transitionCards.length === 0) return
     // Seulement si c'est une créature
@@ -96,17 +98,18 @@ const colorsPerPosition = [
 ]
 
 async function checkEvole() {
-    console.log(cards)
     const fromCard = cards.EvolveFrom?.[0]
     const toCard = cards.EvolveTo?.[0]
     if (!fromCard || !toCard) return
 
-    const fromData = functions.getCardData(fromCard)
-    const toData = functions.getCardData(toCard)
+    const childIds = fromCard.grouppedCards ?? []
+    const groupedById = new Map((cards?._Grouped ?? []).map(c => [c.id, c]))
+    const groupedCards = childIds.map(id => groupedById.get(id)).filter(Boolean)
 
-    await functions.updateCards([fromCard], {
-        grouppedToId: [toCard.id]
-    })
+    for (const child in groupedCards) {
+        await functions.groupCard(child, toCard)
+    }
 
+    await functions.groupCard(fromCard, toCard)
     await functions.repositionCards()
 } 
