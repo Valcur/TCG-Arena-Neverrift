@@ -107,7 +107,8 @@ async function checkEvole() {
     for (const child of groupedCards) {
         await functions.groupCard(toCard, child)
     }
-    await functions.hideCards([fromCard], "no")
     await functions.groupCard(toCard, fromCard)
+    functions.chatLog("{{from}} has evolved to {{to}}", { from: structuredClone(fromCard), to: toCard })
+    await functions.hideCards([fromCard], "yes")
     await functions.repositionCards()
 } 
