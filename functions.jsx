@@ -1,5 +1,3 @@
-import { functions } from "stylus"
-
 async function removeCardProperty() {
     if (!transitionCards || transitionCards.length === 0) return
     // Seulement si c'est une créature
