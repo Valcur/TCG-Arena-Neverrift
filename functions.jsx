@@ -94,3 +94,20 @@ const colorsPerPosition = [
         "backgroundColor": "rgba(73, 33, 108, 0.8)"
     }
 ]
+
+async function checkEvole() {
+    const fromCard = cards.EvolveFrom?.[0]
+    const toCard = cards.EvolveTo?.[0]
+    if (!EvolveFrom || !EvolveTo) return
+
+    const fromData = functions.getCardData(fromCard)
+    const toData = functions.getCardData(toCard)
+
+    await functions.updateCards([toCard], {
+        cardData: toData
+    })
+    await functions.updateCards([fromData], {
+        cardData: toData
+    })
+    await functions.repositionCards()
+} 
