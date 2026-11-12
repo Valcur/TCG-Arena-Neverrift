@@ -99,7 +99,8 @@ async function checkEvole() {
     const fromCard = cards.EvolveFrom?.[0]
     const toCard = cards.EvolveTo?.[0]
     if (!fromCard || !toCard) return
-
+    functions.chatLog("{{from}} has evolved to {{to}}", { from: structuredClone(fromCard), to: toCard })
+    
     const childIds = fromCard.grouppedCards ?? []
     const groupedById = new Map((cards?._Grouped ?? []).map(c => [c.id, c]))
     const groupedCards = childIds.map(id => groupedById.get(id)).filter(Boolean)
@@ -108,7 +109,6 @@ async function checkEvole() {
         await functions.groupCard(toCard, child)
     }
     await functions.groupCard(toCard, fromCard)
-    functions.chatLog("{{from}} has evolved to {{to}}", { from: structuredClone(fromCard), to: toCard })
     await functions.hideCards([fromCard], "yes")
     await functions.repositionCards()
 } 
