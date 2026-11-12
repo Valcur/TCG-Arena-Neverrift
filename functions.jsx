@@ -106,7 +106,7 @@ async function checkEvole() {
 
     console.log("group", groupedCards)
     for (const child in groupedCards) {
-        console.log("groupping")
+        console.log("groupping", child)
         await functions.groupCard(child, toCard)
     }
     await functions.repositionCards()
