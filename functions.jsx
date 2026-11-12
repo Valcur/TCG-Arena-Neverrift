@@ -99,7 +99,7 @@ async function checkEvole() {
     console.log(cards)
     const fromCard = cards.EvolveFrom?.[0]
     const toCard = cards.EvolveTo?.[0]
-    if (!EvolveFrom || !EvolveTo) return
+    if (!fromCard || !toCard) return
 
     const fromData = functions.getCardData(fromCard)
     const toData = functions.getCardData(toCard)
