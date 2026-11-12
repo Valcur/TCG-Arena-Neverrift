@@ -104,11 +104,11 @@ async function checkEvole() {
     const fromData = functions.getCardData(fromCard)
     const toData = functions.getCardData(toCard)
 
-    await functions.updateCards([toCard], {
+    await functions.updateCards([fromCard], {
         cardData: toData
     })
-    await functions.updateCards([fromData], {
-        cardData: toData
+    await functions.updateCards([toCard], {
+        cardData: fromData
     })
     await functions.repositionCards()
 } 
