@@ -99,28 +99,28 @@ async function checkEvole() {
     const fromCard = cards.EvolveFrom?.[0]
     const toCard = cards.EvolveTo?.[0]
     if (!fromCard || !toCard) return
-    functions.chatLog("{{card}} is evolving", { card: fromCard })
+    functions.chatLog("{{card}} is evolving...", { card: fromCard })
     functions.chatLog("has evolved into {{card}}", { card: toCard })
 
     const childIds = fromCard.grouppedCards ?? []
     const groupedById = new Map((cards?._Grouped ?? []).map(c => [c.id, c]))
     const groupedCards = childIds.map(id => groupedById.get(id)).filter(Boolean)
 
-    const getRank = (card) => {
+  const getRank = (card) => {
         const type = functions.getCardData(card)?.type ?? ""
-        if (type === "Pokemon") return 0
-        if (type.includes("Energy")) return 2
+        if (type === "Pokemon") return 2
+        if (type.includes("Energy")) return 0
         return 1
     }
 
     const sortedCards = [...groupedCards].sort((a, b) => getRank(a) - getRank(b))
+    const orderedCards = [...sortedCards, fromCard]
 
-    let i = 1
-    for (const child of sortedCards) {
-        await functions.groupCard(toCard, child, i)
+    let i = 0
+    for (const card of orderedCards) {
+        await functions.groupCard(toCard, card, i)
         i += 1
     }
-    await functions.groupCard(toCard, fromCard, 0)
     await functions.hideCards([fromCard], "yes")
     await functions.repositionCards()
 }
