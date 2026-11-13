@@ -106,10 +106,21 @@ async function checkEvole() {
     const groupedById = new Map((cards?._Grouped ?? []).map(c => [c.id, c]))
     const groupedCards = childIds.map(id => groupedById.get(id)).filter(Boolean)
 
-    for (const child of groupedCards) {
-        await functions.groupCard(toCard, child)
+    const getRank = (card) => {
+        const type = functions.getCardData(card)?.type ?? ""
+        if (type === "Pokemon") return 0
+        if (type.includes("Energy")) return 2
+        return 1
     }
-    await functions.groupCard(toCard, fromCard)
+
+    const sortedCards = [...groupedCards].sort((a, b) => getRank(a) - getRank(b))
+
+    let i = 1
+    for (const child of sortedCards) {
+        await functions.groupCard(toCard, child, i)
+        i += 1
+    }
+    await functions.groupCard(toCard, fromCard, 0)
     await functions.hideCards([fromCard], "yes")
     await functions.repositionCards()
-} 
+}
