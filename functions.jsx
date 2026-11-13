@@ -106,7 +106,10 @@ async function checkEvole() {
     const groupedById = new Map((cards?._Grouped ?? []).map(c => [c.id, c]))
     const groupedCards = childIds.map(id => groupedById.get(id)).filter(Boolean)
 
-  const getRank = (card) => {
+    await functions.updateCards([toCard], { counters: fromCard.counters })
+    await functions.updateCards([fromCard], { counters: [{}, {}] })
+
+    const getRank = (card) => {
         const type = functions.getCardData(card)?.type ?? ""
         if (type === "Pokemon") return 2
         if (type.includes("Energy")) return 0
