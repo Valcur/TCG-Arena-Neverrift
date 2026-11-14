@@ -18,8 +18,13 @@ async function removeCardProperty() {
 }
 
 async function ini() {
-    const tamerCard = cards?.Tamer?.[0]
-    if (!tamerCard) return
+    let tamerCard = cards?.Tamer?.[0]
+    if (!tamerCard) {
+        tamerCard = cards?.Exile?.[0]
+        if (!tamerCard) return
+        const myTurnOrder = game.turn.orderPosition + 1
+        await functions.moveCard(tamerCard, "Tamer" + myTurnOrder)
+    }
     await functions.updateCards([tamerCard], {
         draggableTokens:
             [
