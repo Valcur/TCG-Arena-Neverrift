@@ -91,7 +91,7 @@
                     ]
                 },
                 "sharedZone": {
-                    "height": 40,
+                    "height": 54,
                     "layout": {
                         "direction": "row",
                         "style": {
@@ -452,7 +452,7 @@
                         }
                     },
                     "Tamer": {
-                        "height": 22,
+                        "height": 9,
                         "alignment": "CENTER",
                         "isHidden": "no",
                         "noQuickActions": true,
