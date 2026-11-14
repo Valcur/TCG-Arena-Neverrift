@@ -1284,10 +1284,11 @@
                             "props": {
                                 "className": "position-absolute top-0 start-0",
                                 "style": {
-                                    "--tamer-block-size": "14vh",
+                                    "--tamer-block-size": "15vh",
+                                    "--tamer-border-radius": "1vh",
                                     "display": "flex",
                                     "flexDirection": "column",
-                                    "justifyContent": "space-between",
+                                    "justifyContent": "center",
                                     "width": "100%",
                                     "height": "100%"
                                 }
@@ -1297,8 +1298,9 @@
                                     "type": "div",
                                     "props": {
                                         "style": {
-                                            "backgroundColor": "{{game.turn.orderPosition === 0 ? 'red' : 'transparent'}}",
-                                            "height": "var(--tamer-block-size)"
+                                            "backgroundColor": "{{game.turn.orderPosition === 0 ? 'var(--main-color)' : 'transparent'}}",
+                                            "height": "var(--tamer-block-size)",
+                                            "borderRadius": "var(--tamer-border-radius)"
                                         }
                                     }
                                 },
@@ -1306,8 +1308,9 @@
                                     "type": "div",
                                     "props": {
                                         "style": {
-                                            "backgroundColor": "{{game.turn.orderPosition === 1 ? 'red' : 'transparent'}}",
-                                            "height": "var(--tamer-block-size)"
+                                            "backgroundColor": "{{game.turn.orderPosition === 1 ? 'var(--main-color)' : 'transparent'}}",
+                                            "height": "var(--tamer-block-size)",
+                                            "borderRadius": "var(--tamer-border-radius)"
                                         }
                                     }
                                 },
@@ -1315,8 +1318,9 @@
                                     "type": "div",
                                     "props": {
                                         "style": {
-                                            "backgroundColor": "{{game.turn.orderPosition === 2 ? 'red' : 'transparent'}}",
-                                            "height": "var(--tamer-block-size)"
+                                            "backgroundColor": "{{game.turn.orderPosition === 2 ? 'var(--main-color)' : 'transparent'}}",
+                                            "height": "var(--tamer-block-size)",
+                                            "borderRadius": "var(--tamer-border-radius)"
                                         }
                                     }
                                 },
@@ -1324,8 +1328,9 @@
                                     "type": "div",
                                     "props": {
                                         "style": {
-                                            "backgroundColor": "{{game.turn.orderPosition === 3 ? 'red' : 'transparent'}}",
-                                            "height": "var(--tamer-block-size)"
+                                            "backgroundColor": "{{game.turn.orderPosition === 3 ? 'var(--main-color)' : 'transparent'}}",
+                                            "height": "var(--tamer-block-size)",
+                                            "borderRadius": "var(--tamer-border-radius)"
                                         }
                                     }
                                 }
