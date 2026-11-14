@@ -546,7 +546,7 @@
                             {
                                 "direction": "column",
                                 "style": {
-                                    "width": "calc(16vh * 1.384615)"
+                                    "width": "calc(16vh / 1.384615)"
                                 },
                                 "content": [
                                     {
@@ -1284,10 +1284,11 @@
                             "props": {
                                 "className": "position-absolute top-0 start-0",
                                 "style": {
+                                    "--tamer-block-size": "14vh",
                                     "display": "flex",
                                     "flexDirection": "column",
                                     "justifyContent": "space-between",
-                                    "width": "14vh",
+                                    "width": "100%",
                                     "height": "100%"
                                 }
                             },
@@ -1297,8 +1298,7 @@
                                     "props": {
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 0 ? 'red' : 'transparent'}}",
-                                            "width": "14vh",
-                                            "height": "14vh"
+                                            "height": "var(--tamer-block-size)"
                                         }
                                     }
                                 },
@@ -1307,8 +1307,7 @@
                                     "props": {
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 1 ? 'red' : 'transparent'}}",
-                                            "width": "14vh",
-                                            "height": "14vh"
+                                            "height": "var(--tamer-block-size)"
                                         }
                                     }
                                 },
@@ -1317,8 +1316,7 @@
                                     "props": {
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 2 ? 'red' : 'transparent'}}",
-                                            "width": "14vh",
-                                            "height": "14vh"
+                                            "height": "var(--tamer-block-size)"
                                         }
                                     }
                                 },
@@ -1327,8 +1325,7 @@
                                     "props": {
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 3 ? 'red' : 'transparent'}}",
-                                            "width": "14vh",
-                                            "height": "14vh"
+                                            "height": "var(--tamer-block-size)"
                                         }
                                     }
                                 }
