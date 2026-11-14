@@ -545,7 +545,13 @@
                         "content": [
                             {
                                 "direction": "column",
+                                "style": {
+                                    "width": "calc(16vh * 1.384615)"
+                                },
                                 "content": [
+                                    {
+                                        "section": "TamerWrapper"
+                                    },
                                     {
                                         "section": "Tamer1"
                                     },
@@ -1270,6 +1276,64 @@
                         "isHidden": "no",
                         "noQuickActions": true,
                         "keepTappedNewTurn": true
+                    },
+                    "TamerWrapper": {
+                        "type": "custom",
+                        "blueprint": {
+                            "type": "div",
+                            "props": {
+                                "className": "position-absolute top-0 start-0",
+                                "style": {
+                                    "display": "flex",
+                                    "flexDirection": "column",
+                                    "justifyContent": "space-between",
+                                    "width": "14vh",
+                                    "height": "100%"
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "div",
+                                    "props": {
+                                        "style": {
+                                            "backgroundColor": "{{game.turn.orderPosition === 0 ? 'red' : 'transparent'}}",
+                                            "width": "14vh",
+                                            "height": "14vh"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "div",
+                                    "props": {
+                                        "style": {
+                                            "backgroundColor": "{{game.turn.orderPosition === 1 ? 'red' : 'transparent'}}",
+                                            "width": "14vh",
+                                            "height": "14vh"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "div",
+                                    "props": {
+                                        "style": {
+                                            "backgroundColor": "{{game.turn.orderPosition === 2 ? 'red' : 'transparent'}}",
+                                            "width": "14vh",
+                                            "height": "14vh"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "div",
+                                    "props": {
+                                        "style": {
+                                            "backgroundColor": "{{game.turn.orderPosition === 3 ? 'red' : 'transparent'}}",
+                                            "width": "14vh",
+                                            "height": "14vh"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
                     },
                     "Manager": {
                         "type": "custom",
