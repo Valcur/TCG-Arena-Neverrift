@@ -543,7 +543,8 @@
                     "layout": {
                         "direction": "row",
                         "style": {
-                            "justifyContent": "center"
+                            "justifyContent": "center",
+                            "gap": "2vh"
                         },
                         "content": [
                             {
