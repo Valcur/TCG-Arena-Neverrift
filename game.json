@@ -589,7 +589,7 @@
                                     "background": "url(https://valcur.github.io/TCG-Arena-Neverrift/Images/arena.jpg)",
                                     "boxShadow": "0 0 1vh black",
                                     "border": "1vh solid #161616",
-                                    "backgroundSize": "contain"
+                                    "backgroundSize": "37.5% 50%"
                                 },
                                 "content": [
                                     {
