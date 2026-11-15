@@ -544,7 +544,7 @@
                         "direction": "row",
                         "style": {
                             "justifyContent": "center",
-                            "gap": "2vh"
+                            "gap": "3vh"
                         },
                         "content": [
                             {
@@ -1264,28 +1264,32 @@
                         "alignment": "CENTER",
                         "isHidden": "no",
                         "noQuickActions": true,
-                        "keepTappedNewTurn": true
+                        "keepTappedNewTurn": true,
+                        "displayedTitle": "Player 1"
                     },
                     "Tamer2": {
                         "height": 14,
                         "alignment": "CENTER",
                         "isHidden": "no",
                         "noQuickActions": true,
-                        "keepTappedNewTurn": true
+                        "keepTappedNewTurn": true,
+                        "displayedTitle": "Player 2"
                     },
                     "Tamer3": {
                         "height": 14,
                         "alignment": "CENTER",
                         "isHidden": "no",
                         "noQuickActions": true,
-                        "keepTappedNewTurn": true
+                        "keepTappedNewTurn": true,
+                        "displayedTitle": "Player 3"
                     },
                     "Tamer4": {
                         "height": 14,
                         "alignment": "CENTER",
                         "isHidden": "no",
                         "noQuickActions": true,
-                        "keepTappedNewTurn": true
+                        "keepTappedNewTurn": true,
+                        "displayedTitle": "Player 4"
                     },
                     "TamerWrapper": {
                         "type": "custom",
@@ -1296,6 +1300,7 @@
                                 "style": {
                                     "--tamer-block-size": "15vh",
                                     "--tamer-border-radius": "1vh",
+                                    "--tamer-margin": "0.5vh",
                                     "justifyContent": "space-between",
                                     "width": "100%",
                                     "height": "100%"
@@ -1308,7 +1313,9 @@
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 0 ? 'var(--main-color)' : 'transparent'}}",
                                             "height": "var(--tamer-block-size)",
-                                            "borderRadius": "var(--tamer-border-radius)"
+                                            "width": "calc(var(--tamer-block-size) / 1.384615)",
+                                            "borderRadius": "var(--tamer-border-radius)",
+                                            "margin": "var(--tamer-margin)"
                                         }
                                     }
                                 },
@@ -1318,7 +1325,9 @@
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 1 ? 'var(--main-color)' : 'transparent'}}",
                                             "height": "var(--tamer-block-size)",
-                                            "borderRadius": "var(--tamer-border-radius)"
+                                            "width": "calc(var(--tamer-block-size) / 1.384615)",
+                                            "borderRadius": "var(--tamer-border-radius)",
+                                            "margin": "var(--tamer-margin)"
                                         }
                                     }
                                 },
@@ -1328,7 +1337,9 @@
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 2 ? 'var(--main-color)' : 'transparent'}}",
                                             "height": "var(--tamer-block-size)",
-                                            "borderRadius": "var(--tamer-border-radius)"
+                                            "width": "calc(var(--tamer-block-size) / 1.384615)",
+                                            "borderRadius": "var(--tamer-border-radius)",
+                                            "margin": "var(--tamer-margin)"
                                         }
                                     }
                                 },
@@ -1338,7 +1349,9 @@
                                         "style": {
                                             "backgroundColor": "{{game.turn.orderPosition === 3 ? 'var(--main-color)' : 'transparent'}}",
                                             "height": "var(--tamer-block-size)",
-                                            "borderRadius": "var(--tamer-border-radius)"
+                                            "width": "calc(var(--tamer-block-size) / 1.384615)",
+                                            "borderRadius": "var(--tamer-border-radius)",
+                                            "margin": "var(--tamer-margin)"
                                         }
                                     }
                                 }
