@@ -107,23 +107,22 @@
                             "--section-padding": "0vh",
                             "justifyContent": "center",
                             "zIndex": 1,
-                            "backgroundColor": "rgba(0,0,0,0.1)",
-                            "backdropFilter": "blur(60px)",
                             "borderRadius": "1.5vh",
                             "width": "fit-content",
                             "padding": "0.75vh",
                             "gap": "var(--section-gap)",
                             "background": "url(https://valcur.github.io/TCG-Arena-Neverrift/Images/arena.jpg)",
                             "boxShadow": "0 0 1vh black",
-                            "border": "1vh solid #161616",
-                            "backgroundSize": "contain"
+                            "backgroundSize": "74.5% 49.6%",
+                            "backgroundPosition": "1% 0.5%"
                         },
                         "content": [
                             {
                                 "direction": "column",
                                 "style": {
                                     "width": "var(--board-column-width)",
-                                    "gap": "var(--section-gap)"
+                                    "gap": "var(--section-gap)",
+                                    "opacity": 0
                                 },
                                 "content": [
                                     {
@@ -164,7 +163,8 @@
                                 "direction": "column",
                                 "style": {
                                     "width": "var(--board-column-width)",
-                                    "gap": "var(--section-gap)"
+                                    "gap": "var(--section-gap)",
+                                    "opacity": 0
                                 },
                                 "content": [
                                     {
@@ -205,7 +205,8 @@
                                 "direction": "column",
                                 "style": {
                                     "width": "var(--board-column-width)",
-                                    "gap": "var(--section-gap)"
+                                    "gap": "var(--section-gap)",
+                                    "opacity": 0
                                 },
                                 "content": [
                                     {
@@ -246,7 +247,8 @@
                                 "direction": "column",
                                 "style": {
                                     "width": "var(--board-column-width)",
-                                    "gap": "var(--section-gap)"
+                                    "gap": "var(--section-gap)",
+                                    "opacity": 0
                                 },
                                 "content": [
                                     {
@@ -455,7 +457,7 @@
                         }
                     },
                     "Tamer": {
-                        "height": 12,
+                        "height": 22,
                         "alignment": "CENTER",
                         "isHidden": "no",
                         "noQuickActions": true,
