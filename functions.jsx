@@ -36,7 +36,7 @@ async function ini() {
 
 async function onCardsUpdate() {
     const row = 4
-    const col = 4
+    const col = 8
     let myScore = 0
 
     for (let i = 1; i <= col; i++) {

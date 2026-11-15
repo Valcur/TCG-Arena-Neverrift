@@ -520,6 +520,18 @@
                     "id": "Green",
                     "name": "Green token",
                     "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Green.png"
+                },
+                {
+                    "id": "Blue",
+                    "name": "Blue token",
+                    "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Blue.png",
+                    "backgroundColor": "rgba(52, 137, 143, 0.8)"
+                },
+                {
+                    "id": "Purple",
+                    "name": "Purple token",
+                    "image": "https://valcur.github.io/TCG-Arena-MTG/Images/Tokens/Purple.png",
+                    "backgroundColor": "rgba(73, 33, 108, 0.8)"
                 }
             ],
             "countersStartingValues": [
