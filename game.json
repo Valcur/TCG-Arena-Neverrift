@@ -1389,7 +1389,9 @@
         }
     },
     "defaultRessources": {
-        "backgrounds": [],
+        "backgrounds": [
+            "https://valcur.github.io/TCG-Arena-Neverrift/Images/banner.webp"
+        ],
         "decksUrl": "https://valcur.github.io/TCG-Arena-Neverrift/decks.json"
     },
     "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nPlayer counters will show how many tamed creatures each players have.",
@@ -1398,6 +1400,7 @@
         "cardBack": "https://valcur.github.io/TCG-Arena-Neverrift/Images/cardBack.jpg",
         "cardBackColor": "#1d1d1e"
     },
+    "translationsUrl": "https://valcur.github.io/TCG-Arena-Neverrift/translations.json",
     "scriptsUrls": [
         "https://valcur.github.io/TCG-Arena-Neverrift/functions.jsx"
     ]
