@@ -553,7 +553,7 @@
                     ]
                 },
                 "sharedZone": {
-                    "height": 70,
+                    "height": 67,
                     "layout": {
                         "direction": "row",
                         "style": {
