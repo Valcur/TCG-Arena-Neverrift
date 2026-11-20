@@ -2,13 +2,14 @@ async function removeCardProperty() {
     if (!transitionCards || transitionCards.length === 0) return
     // Seulement si c'est une créature
     const cardData = functions.getCardData(transitionCards[0])
-    if (cardData?.type !== "Creature") return
-    await functions.updateCards(transitionCards, {
-        draggableTokens:
-            [
-                colorsPerPosition[game.turn.orderPosition] ?? colorsPerPosition[0]
-            ]
-    })
+    if (cardData?.type === "Creature" && transitionCards[0].position?.section === "Hand") {
+        await functions.updateCards(transitionCards, {
+            draggableTokens:
+                [
+                    colorsPerPosition[game.turn.orderPosition] ?? colorsPerPosition[0]
+                ]
+        })
+    }
 
 
     for (const card of transitionCards) {

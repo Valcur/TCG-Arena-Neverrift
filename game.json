@@ -1310,7 +1310,7 @@
                         "blueprint": {
                             "type": "div",
                             "props": {
-                                "className": "position-absolute top-0 start-0",
+                                "className": "position-absolute top-0 start-0 d-flex flex-column",
                                 "style": {
                                     "--tamer-block-size": "14vh",
                                     "--tamer-border-radius": "1vh",
