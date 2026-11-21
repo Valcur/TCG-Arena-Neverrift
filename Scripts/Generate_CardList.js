@@ -9,8 +9,12 @@
  *  - id    = nom du fichier image sans la langue ("alpha_NVR-EN001_1.webp" → "alpha_NVR001_1") : unique, stable,
  *            et identique quand une carte passe de l'allemand à l'anglais
  *  - image = lien direct du .json (aucun téléchargement)
- *  - Anglais en priorité. Une carte sans version anglaise (ex : Otter's Den, encore "coming soon") est prise en
- *    allemand ; elle passera en anglais toute seule quand les données anglaises arriveront (même id)
+ *  - Multilangue, anglais en référence : name, face.front.name et face.front.image sont des objets { en, de }.
+ *    "de" n'est présent que si la version allemande existe et diffère de l'anglais ; sinon TCG Arena retombe sur "en"
+ *  - Images EN et DE d'une même carte associées par nom de fichier sans la langue, puis par position pour les
+ *    restantes (ex : "NVR-EN033Alt_1" ↔ "NVR-DE033_2"), signalées dans le rapport
+ *  - Une carte sans nom anglais (ex : Otter's Den, encore "coming soon") prend son nom et son image allemands comme
+ *    référence "en" ; elle passera en anglais toute seule quand les données anglaises arriveront (même id)
  *  - Une même image dans plusieurs fichiers (ex : boardgame reprend les cartes Alpha) n'est gardée qu'une fois
  *  - Une carte qui disparaît des fichiers est conservée telle quelle (aucune carte perdue pour les decks existants)
  *  - Rapport dans Scripts/cardlist-report.md
@@ -76,6 +80,10 @@ function rel(...p) { return path.join(CONFIG.repoRoot, ...p); }
 function clean(s) { return String(s ?? '').replace(/\s+/g, ' ').trim(); }
 function titleCase(s) { return clean(String(s).replace(/_/g, ' ')).replace(/\b\p{L}/gu, ch => ch.toUpperCase()); }
 function images(list) { return (Array.isArray(list) ? list : []).map(clean).filter(u => /^https?:\/\//i.test(u)); }
+/** Valeur traduite { en, de } : "de" omis s'il est vide ou identique à "en" */
+function localized(en, de) { return de && de !== en ? { en, de } : { en }; }
+/** Nom anglais d'une carte (objet traduit ou ancienne chaîne) */
+function englishName(entry) { return typeof entry?.name === 'object' ? entry.name?.en : entry?.name; }
 
 async function readJsonIfExists(file, fallback) {
     try {
@@ -97,6 +105,29 @@ function imageId(url) {
     let file;
     try { file = decodeURIComponent(new URL(url).pathname.split('/').pop()); } catch { file = String(url).split('/').pop(); }
     return file.replace(/\.[a-z0-9]+$/i, '').replace(/-(EN|DE)(?=[\s_\d])/gi, '').replace(/\s+/g, '');
+}
+
+/**
+ * Associe les images anglaises et allemandes d'une carte : d'abord par id (nom de fichier sans la langue), puis par
+ * position pour celles qui restent. Retourne [{ en, de }] ; sans image anglaise, une paire par image allemande.
+ */
+function pairImages(en, de, ref) {
+    if (!en.length) return de.map(d => ({ de: d }));
+    const deById = new Map(de.map(d => [imageId(d), d]));
+    const used = new Set();
+    const pairs = en.map(e => {
+        const d = deById.get(imageId(e));
+        if (d && !used.has(d)) { used.add(d); return { en: e, de: d }; }
+        return { en: e };
+    });
+    const leftoverDe = de.filter(d => !used.has(d));
+    for (const p of pairs) {
+        if (p.de || !leftoverDe.length) continue;
+        p.de = leftoverDe.shift();
+        report('warning', 'Images allemandes associées par position (à vérifier)', ref, `${imageId(p.en)} ↔ ${imageId(p.de)}`);
+    }
+    for (const d of leftoverDe) report('warning', 'Images allemandes sans équivalent anglais (ignorées)', ref, imageId(d));
+    return pairs;
 }
 
 /** Numéro de la carte pour le tri : "NVR-EN 033" → 33, "PR-EN0001" → 1, "NVR-EN 151/150" → 151 */
@@ -142,6 +173,8 @@ function buildReport(summary) {
     for (const s of summary.sets) lines.push(`| ${CONFIG.setsDir}/${s.file} (${s.name}) | ${s.error ? '❌ ' + s.error : `${s.entries} entrées → ${s.cards} cartes${s.duplicates ? `, ${s.duplicates} doublons ignorés` : ''}${s.german ? `, ${s.german} en allemand` : ''}`} |`);
     lines.push(`| Cartes dans ${CONFIG.cardsFile} | ${summary.cardCount} (avant : ${summary.previousCount}) |`);
     lines.push(`| Noms différents (cartes jouables) | ${summary.nameCount} |`);
+    lines.push(`| Cartes avec nom allemand | ${summary.germanNames} |`);
+    lines.push(`| Cartes avec image allemande | ${summary.germanImages} |`);
     lines.push(`| Nouvelles cartes | ${summary.added.length} |`);
     lines.push(`| Cartes disparues des fichiers (conservées) | ${summary.kept.length} |`);
     lines.push(`| ❌ Erreurs | ${errors.length} |`);
@@ -166,7 +199,7 @@ function buildReport(summary) {
 
     if (summary.added.length && summary.previousCount) {
         lines.push(`## ➕ Nouvelles cartes (${summary.added.length})`, '');
-        summary.added.forEach(e => lines.push(`- \`${e.id}\` ${e.name} (${e.set})`));
+        summary.added.forEach(e => lines.push(`- \`${e.id}\` ${englishName(e)} (${e.set})`));
         lines.push('');
     }
     return lines.join('\n');
@@ -206,7 +239,7 @@ function printIssuesToConsole() {
 // ─────────────────────────────── Main ───────────────────────────────
 
 async function main() {
-    const summary = { sets: [], cardCount: 0, previousCount: 0, nameCount: 0, added: [], kept: [], fatal: null };
+    const summary = { sets: [], cardCount: 0, previousCount: 0, nameCount: 0, germanNames: 0, germanImages: 0, added: [], kept: [], fatal: null };
 
     try {
         // ── 1. Fichiers de sets ──
@@ -258,23 +291,30 @@ async function main() {
                 const ref = clean(c.id_en) || clean(c.id_de) || '?';
                 const en = images(c.images_en);
                 const de = images(c.images_de);
-                const name = clean(c.name_en) || clean(c.name_de);
-                const pics = clean(c.name_en) ? (en.length ? en : de) : (de.length ? de : en);
+                const nameEn = clean(c.name_en);
+                const nameDe = clean(c.name_de);
+                const name = nameEn || nameDe;
                 if (!name) { report('error', 'Cartes sans nom (ignorées)', `${s.file} ${ref}`, ''); continue; }
-                if (!pics.length) { report('warning', 'Cartes sans image (ignorées)', `${s.file} ${ref}`, name); continue; }
-                if (!clean(c.name_en)) stat.german++;
+                if (!en.length && !de.length) { report('warning', 'Cartes sans image (ignorées)', `${s.file} ${ref}`, name); continue; }
+                if (!nameEn) stat.german++;
                 else if (!en.length) report('warning', 'Cartes avec nom anglais mais image allemande seulement', `${s.file} ${ref}`, name);
                 if (/\{[^}]*\}/.test(clean(c.id_en))) report('warning', 'Identifiants mal remplis dans les données (sans effet sur la carte)', `${s.file} ${c.id_en}`, name);
+                const localizedName = localized(name, nameDe);
 
-                pics.forEach((image, alt) => {
-                    const id = imageId(image);
+                // sans nom anglais, la carte n'est pas encore sortie en anglais : ses images anglaises ne sont pas utilisées
+                pairImages(nameEn ? en : [], de.length || nameEn ? de : en, `${s.file} ${ref}`).forEach((pair, alt) => {
+                    const main = pair.en || pair.de;
+                    const id = imageId(main);
+                    const image = localized(main, pair.de);
                     if (out[id]) {
                         if (firstSetOf[id] !== s.key) duplicatesFrom[firstSetOf[id]] = (duplicatesFrom[firstSetOf[id]] || 0) + 1;
                         else report('warning', 'Même image deux fois dans un fichier (gardée une fois)', `${s.file} ${ref}`, `${name} — ${image}`);
                         stat.duplicates++;
                         return;
                     }
-                    const entry = buildCardEntry(c, { id, name, image, setName: s.name });
+                    const entry = buildCardEntry(c, { id, name: localizedName, image, setName: s.name });
+                    if (entry.name.de) summary.germanNames++;
+                    if (entry.face.front.image.de) summary.germanImages++;
                     out[id] = entry;
                     firstSetOf[id] = s.key;
                     built.push({ id, order: s.order, key: s.key, number: cardNumber(c), alt });
@@ -310,10 +350,11 @@ async function main() {
         const sorted = [...built.map(b => b.id), ...keptIds];
         await writeFileAtomic(cardsPath, JSON.stringify(Object.fromEntries(sorted.map(k => [k, out[k]])), null, 2) + '\n');
         summary.cardCount = sorted.length;
-        summary.nameCount = new Set(Object.values(out).map(e => e.name)).size;
+        summary.nameCount = new Set(Object.values(out).map(englishName)).size;
 
         console.log(`💾 ${CONFIG.cardsFile} écrit : ${summary.cardCount} cartes, ${summary.nameCount} noms différents ` +
             `(${summary.added.length} nouvelles, ${summary.kept.length} disparues des fichiers conservées)`);
+        console.log(`   Allemand : ${summary.germanNames} noms, ${summary.germanImages} images`);
         for (const s of summary.sets) {
             console.log(`   ${s.file.padEnd(16)} ${s.error ? '❌ ' + s.error : `${String(s.entries).padStart(4)} entrées → ${String(s.cards).padStart(4)} cartes` +
                 `${s.duplicates ? `, ${s.duplicates} doublons` : ''}${s.german ? `, ${s.german} en allemand` : ''}`}`);

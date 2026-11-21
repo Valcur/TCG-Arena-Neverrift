@@ -1,4 +1,4 @@
-# Liste des cartes Neverrift — 2026-10-27 18:22 UTC
+# Liste des cartes Neverrift — 2026-11-21 12:55 UTC
 
 | | |
 |---|---|
@@ -12,14 +12,33 @@
 | Sets/promo.json (Promo) | 24 entrées → 23 cartes, 1 doublons ignorés |
 | Sets/vip.json (VIP) | 1 entrées → 1 cartes |
 | Sets/boardgame.json (Board Game Starter Kit) | 93 entrées → 0 cartes, 103 doublons ignorés |
-| Cartes dans NeverriftCards.json | 515 (avant : 0) |
+| Cartes dans NeverriftCards.json | 515 (avant : 515) |
 | Noms différents (cartes jouables) | 296 |
-| Nouvelles cartes | 515 |
+| Cartes avec nom allemand | 377 |
+| Cartes avec image allemande | 467 |
+| Nouvelles cartes | 0 |
 | Cartes disparues des fichiers (conservées) | 0 |
 | ❌ Erreurs | 0 |
-| ⚠️ Avertissements | 4 |
+| ⚠️ Avertissements | 18 |
 
-## ⚠️ Avertissements (4)
+## ⚠️ Avertissements (18)
+
+### Images allemandes associées par position (à vérifier) — 14
+
+- `alpha.json NVR-EN 033` — alpha_NVR033Alt_1 ↔ alpha_NVR033_2
+- `alpha.json NVR-EN 062` — alpha_NVR062Alt_1 ↔ alpha_NVR062_2
+- `alpha.json NVR-EN 069` — alpha_NVR069Alt_1 ↔ alpha_NVR069_2
+- `alpha.json NVR-EN 101` — alpha_NVR101Alt_1 ↔ alpha_NVR101_2
+- `alpha.json NVR-EN 150` — alpha_NVR150Alt_1 ↔ alpha_NVR150_2
+- `1st.json NVR-EN 033` — 1st_NVR033Alt_1 ↔ 1st_NVR033_2
+- `1st.json NVR-EN 062` — 1st_NVR062Alt_1 ↔ 1st_NVR062_2
+- `1st.json NVR-EN 069` — 1st_NVR069Alt_1 ↔ 1st_NVR069_2
+- `1st.json NVR-EN 101` — 1st_NVR101Alt_1 ↔ 1st_NVR101_2
+- `1st.json NVR-EN 150` — 1st_NVR150Alt_1 ↔ 1st_NVR150_2
+- `boxtopper.json NVR-EN 151` — BOX_NVR151Alt1 ↔ BOX_NVR151Alt
+- `boardgame.json NVR-EN 062` — alpha_NVR062Alt_1 ↔ alpha_NVR062_2
+- `boardgame.json NVR-EN 069` — alpha_NVR069Alt_1 ↔ alpha_NVR069_2
+- `boardgame.json NVR-EN 101` — alpha_NVR101Alt_1 ↔ alpha_NVR101_2
 
 ### Cartes sans version anglaise (prises en allemand) — 1
 
