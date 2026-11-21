@@ -101,8 +101,8 @@
                         "direction": "row",
                         "style": {
                             "--board-column-width": "calc(18vh / 1.384615)",
-                            "--section-border": "1px solid rgba(255,255,255,0.5)",
-                            "--section-backdrop-filter": "blur(20px)",
+                            "--section-outline": "3px solid rgba(255,255,255,0.2)",
+                            "--section-backdrop-filter": "blur(35px)",
                             "--section-background": "transparent",
                             "--section-border-radius": "1vh",
                             "--section-gap": "0.75vh",
@@ -125,7 +125,7 @@
                                     {
                                         "section": "Board_1_1",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -135,7 +135,7 @@
                                     {
                                         "section": "Board_1_2",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -145,7 +145,7 @@
                                     {
                                         "section": "Board_1_3",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -155,7 +155,7 @@
                                     {
                                         "section": "Board_1_4",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -174,7 +174,7 @@
                                     {
                                         "section": "Board_2_1",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -184,7 +184,7 @@
                                     {
                                         "section": "Board_2_2",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -194,7 +194,7 @@
                                     {
                                         "section": "Board_2_3",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -204,7 +204,7 @@
                                     {
                                         "section": "Board_2_4",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -223,7 +223,7 @@
                                     {
                                         "section": "Board_3_1",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -233,7 +233,7 @@
                                     {
                                         "section": "Board_3_2",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -243,7 +243,7 @@
                                     {
                                         "section": "Board_3_3",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -253,7 +253,7 @@
                                     {
                                         "section": "Board_3_4",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -272,7 +272,7 @@
                                     {
                                         "section": "Board_4_1",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -282,7 +282,7 @@
                                     {
                                         "section": "Board_4_2",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -292,7 +292,7 @@
                                     {
                                         "section": "Board_4_3",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -302,7 +302,7 @@
                                     {
                                         "section": "Board_4_4",
                                         "style": {
-                                            "border": "var(--section-border)",
+                                            "outline": "var(--section-outline)",
                                             "backdropFilter": "var(--section-backdrop-filter)",
                                             "background": "var(--section-background)",
                                             "borderRadius": "var(--section-border-radius)",
@@ -614,8 +614,8 @@
                                 "direction": "row",
                                 "style": {
                                     "--board-column-width": "calc(16vh / 1.384615)",
-                                    "--section-border": "1px solid rgba(255,255,255,0.5)",
-                                    "--section-backdrop-filter": "blur(20px)",
+                                    "--section-outline": "3px solid rgba(255,255,255,0.4)",
+                                    "--section-backdrop-filter": "blur(35px)",
                                     "--section-background": "transparent",
                                     "--section-border-radius": "1vh",
                                     "--section-gap": "0.75vh",
@@ -638,7 +638,7 @@
                                             {
                                                 "section": "Board_1_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -648,7 +648,7 @@
                                             {
                                                 "section": "Board_1_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -658,7 +658,7 @@
                                             {
                                                 "section": "Board_1_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -668,7 +668,7 @@
                                             {
                                                 "section": "Board_1_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -687,7 +687,7 @@
                                             {
                                                 "section": "Board_2_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -697,7 +697,7 @@
                                             {
                                                 "section": "Board_2_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -707,7 +707,7 @@
                                             {
                                                 "section": "Board_2_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -717,7 +717,7 @@
                                             {
                                                 "section": "Board_2_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -736,7 +736,7 @@
                                             {
                                                 "section": "Board_3_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -746,7 +746,7 @@
                                             {
                                                 "section": "Board_3_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -756,7 +756,7 @@
                                             {
                                                 "section": "Board_3_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -766,7 +766,7 @@
                                             {
                                                 "section": "Board_3_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -785,7 +785,7 @@
                                             {
                                                 "section": "Board_4_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -795,7 +795,7 @@
                                             {
                                                 "section": "Board_4_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -805,7 +805,7 @@
                                             {
                                                 "section": "Board_4_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -815,7 +815,7 @@
                                             {
                                                 "section": "Board_4_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -834,7 +834,7 @@
                                             {
                                                 "section": "Board_5_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -844,7 +844,7 @@
                                             {
                                                 "section": "Board_5_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -854,7 +854,7 @@
                                             {
                                                 "section": "Board_5_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -864,7 +864,7 @@
                                             {
                                                 "section": "Board_5_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -883,7 +883,7 @@
                                             {
                                                 "section": "Board_6_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -893,7 +893,7 @@
                                             {
                                                 "section": "Board_6_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -903,7 +903,7 @@
                                             {
                                                 "section": "Board_6_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -913,7 +913,7 @@
                                             {
                                                 "section": "Board_6_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -932,7 +932,7 @@
                                             {
                                                 "section": "Board_7_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -942,7 +942,7 @@
                                             {
                                                 "section": "Board_7_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -952,7 +952,7 @@
                                             {
                                                 "section": "Board_7_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -962,7 +962,7 @@
                                             {
                                                 "section": "Board_7_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -981,7 +981,7 @@
                                             {
                                                 "section": "Board_8_1",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -991,7 +991,7 @@
                                             {
                                                 "section": "Board_8_2",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -1001,7 +1001,7 @@
                                             {
                                                 "section": "Board_8_3",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
@@ -1011,7 +1011,7 @@
                                             {
                                                 "section": "Board_8_4",
                                                 "style": {
-                                                    "border": "var(--section-border)",
+                                                    "outline": "var(--section-outline)",
                                                     "backdropFilter": "var(--section-backdrop-filter)",
                                                     "background": "var(--section-background)",
                                                     "borderRadius": "var(--section-border-radius)",
