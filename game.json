@@ -101,7 +101,7 @@
                         "direction": "row",
                         "style": {
                             "--board-column-width": "calc(18vh / 1.384615)",
-                            "--section-outline": "1px solid rgba(255,255,255,1)",
+                            "--section-outline": "1px solid rgba(255,255,255,0)",
                             "--section-backdrop-filter": "blur(35px)",
                             "--section-background": "transparent",
                             "--section-border-radius": "1vh",
@@ -614,7 +614,7 @@
                                 "direction": "row",
                                 "style": {
                                     "--board-column-width": "calc(16vh / 1.384615)",
-                                    "--section-outline": "1px solid rgba(255,255,255,1)",
+                                    "--section-outline": "1px solid rgba(255,255,255,0.5)",
                                     "--section-backdrop-filter": "blur(35px)",
                                     "--section-background": "transparent",
                                     "--section-border-radius": "1vh",
