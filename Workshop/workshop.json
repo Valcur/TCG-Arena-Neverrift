@@ -1,0 +1,17 @@
+{
+    "author": "PiouPiou",
+    "gameUrl": "https://valcur.github.io/TCG-Arena-Neverrift/game.json",
+    "tags": "",
+    "langs": [
+        "en",
+        "de"
+    ],
+    "useAiArts": false,
+    "screenshotUrls": [
+        "https://valcur.github.io/TCG-Arena-Neverrift/Workshop/workshop1.jpg"
+    ],
+    "descriptionUrl": "https://valcur.github.io/TCG-Arena-Neverrift/Workshop/description.md",
+    "updates": [
+        "First release!"
+    ]
+}
