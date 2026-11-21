@@ -1,5 +1,3 @@
-### Neverrift TCG mod for TCG Arena.
-
 **Neverrift** is a German trading card game. Pick your Tamer, place your creatures on the grid and tame your opponents' creatures. The player who tames the most creatures wins.
 
 Every card is available in **English and German**, with all alternate arts.
