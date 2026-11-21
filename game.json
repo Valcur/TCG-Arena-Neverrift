@@ -101,7 +101,7 @@
                         "direction": "row",
                         "style": {
                             "--board-column-width": "calc(18vh / 1.384615)",
-                            "--section-outline": "3px solid rgba(255,255,255,0.2)",
+                            "--section-outline": "1px solid rgba(255,255,255,1)",
                             "--section-backdrop-filter": "blur(35px)",
                             "--section-background": "transparent",
                             "--section-border-radius": "1vh",
@@ -614,7 +614,7 @@
                                 "direction": "row",
                                 "style": {
                                     "--board-column-width": "calc(16vh / 1.384615)",
-                                    "--section-outline": "3px solid rgba(255,255,255,0.4)",
+                                    "--section-outline": "1px solid rgba(255,255,255,1)",
                                     "--section-backdrop-filter": "blur(35px)",
                                     "--section-background": "transparent",
                                     "--section-border-radius": "1vh",
@@ -1474,7 +1474,7 @@
         ],
         "decksUrl": "https://valcur.github.io/TCG-Arena-Neverrift/decks.json"
     },
-    "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nPlayer counters will show how many tamed creatures each players have.",
+    "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nUse the tokens palette at the left of your screen to add tokens of your color (color on your Tamer card) to tamed creatures.\n\nPlayer counters will show how many tamed creatures each players have.",
     "cards": {
         "dataUrl": "https://valcur.github.io/TCG-Arena-Neverrift/NeverriftCards.json",
         "cardBack": "https://valcur.github.io/TCG-Arena-Neverrift/Images/cardBack.jpg",
