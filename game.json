@@ -1474,7 +1474,7 @@
         ],
         "decksUrl": "https://valcur.github.io/TCG-Arena-Neverrift/decks.json"
     },
-    "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nUse the tokens palette at the left of your screen to add tokens of your color (color on your Tamer card) to tamed creatures.\n\nPlayer counters will show how many tamed creatures each players have.",
+    "customHelp": "Check rules at https://neverrift.com/pages/how-to-play .\n\nUse the tokens palette at the left of your screen to add tokens of your color (color on your Tamer card) to tamed creatures.\n\nPlayer counters will show how many tamed creatures each players have.\n\nMake sure to disabe the zoom on active player in the options when playing the 4 players mode.",
     "cards": {
         "dataUrl": "https://valcur.github.io/TCG-Arena-Neverrift/NeverriftCards.json",
         "cardBack": "https://valcur.github.io/TCG-Arena-Neverrift/Images/cardBack.jpg",
