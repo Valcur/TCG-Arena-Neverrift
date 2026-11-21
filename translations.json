@@ -1,4 +1,7 @@
 {
+    "additionalLanguages": [
+      "de"
+    ],
   "en": {
       "Gameplay": {
           "Classic": "2 players - 4x4",
